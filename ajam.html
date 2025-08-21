@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Muhammad Azam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #f97316;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-card {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-header {
+            position: relative;
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
+
+        .profile-picture {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid white;
+
+            object-fit: cover;
+            position: absolute;
+            bottom: -60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-content {
+            padding: 70px 25px 30px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .info-item {
+            color: var(--gray);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-icon {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .hobbies-section {
+            margin-top: 25px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            list-style-type: none;
+        }
+
+        .hobby-item {
+            background-color: var(--light);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--dark);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hobby-icon {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .social-media {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: 0 0 16px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #e2e8f0;
+            color: var(--primary);
+        }
+
+        .social-icon {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 480px) {
+            .profile-header {
+                height: 150px;
+            }
+            
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+                bottom: -50px;
+            }
+            
+            .profile-content {
+                padding: 60px 20px 25px;
+            }
+            
+            .hobby-item {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-content > * {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .profile-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .profile-content > *:nth-child(2) { animation-delay: 0.2s; }
+        .profile-content > *:nth-child(3) { animation-delay: 0.3s; }
+        .profile-content > *:nth-child(4) { animation-delay: 0.4s; }
+        .hobbies-section { animation-delay: 0.5s !important; }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-header"> 
+            <img src="WhatsApp Image 2025-08-21 at 12.31.24.jpeg" alt="Professional portrait of Muhammad Azam smiling wearing casual clothes" class="profile-picture">
+        </div>
+       
+        
+        <div class="profile-content">
+            <h1 class="name">Muhammad Azam</h1>
+            
+            <div class="info-item">
+                <i class="fas fa-graduation-cap info-icon"></i>
+                <span>SMK Perguruan Cikini</span>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-trophy info-icon"></i>
+                <span>Menjadi pemain Bola</span>
+            </div>
+            
+            <div class="hobbies-section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    Hobi
+                </h2>
+                
+                <ul class="hobbies-list">
+                    <li class="hobby-item">
+                        <i class="fas fa-futbol hobby-icon"></i>
+                        Bermain Bola
+                    </li>
+                    <li class="hobby-item">
+                        <i class="fas fa-gamepad hobby-icon"></i>
+                        Bermain Game
+                    </li>
+                    <li class="hobby-item">
+                        <i class="fas fa-tv hobby-icon"></i>
+                        Nonton Bola
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="social-media">
+            <a href="https://www.instagram.com/betterbo_y?igsh=MXF2ZHgzcWgxc2dwe" class="social-link" target="_blank">
+                <i class="fab fa-instagram social-icon"></i>
+                <span>@betterbo_y</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Animation control
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.profile-content > *');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+            });
+            
+            // Small hover effect for the Instagram link
+            const socialLink = document.querySelector('.social-link');
+            socialLink.addEventListener('mouseenter', () => {
+                const icon = socialLink.querySelector('i');
+                icon.style.transform = 'scale(1.2)';
+            });
+            
+            socialLink.addEventListener('mouseleave', () => {
+                const icon = socialLink.querySelector('i');
+                icon.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+
